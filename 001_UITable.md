@@ -4,6 +4,13 @@
 
 ### class WordsVC: UIViewController: UITableViewDelegate, UITableViewDataSource {
 
+---
+> PRE-NOTE
+#### viewDidLoad**
+#### viewDidLayoutSubviews**
+#### layoutSubviews**
+---
+
     let tableView : UITableView = {
         let tableView = UITableView()
         tableView.register(WordsTableListViewCell.self, forCellReuseIdentifier: WordsTableListViewCell.identifier)
