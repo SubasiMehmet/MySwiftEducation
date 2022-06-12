@@ -78,4 +78,50 @@
         listModel.listUUID = myIdArray[indexPath.row]
         performSegue(withIdentifier: "toDetailVC", sender: nil)
     }
-  
+    
+======
+// MARK: - Delete a Row in a UITable
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+        
+            // MARK: Fetching Only That Result in Selected Row
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Duties")
+            fetchRequest.returnsObjectsAsFaults = false
+            
+            //MARK: Filtering with UUID() While Fetching
+            let idString = self.myIdArray[indexPath.row].uuidString
+            fetchRequest.predicate = NSPredicate(format: "id = %@", idString)
+            
+            
+            // MARK: Fetching & Deleting from CoreData
+            //After deleting from CoreData, Delete it from array and reload UITable
+            do{
+                let results = try context.fetch(fetchRequest)
+                if results.count > 0 {
+                    for result in results as! [NSManagedObject] {
+                        if let id = result.value(forKey: "id") as? UUID {
+                            if id == myIdArray[indexPath.row] {
+                                context.delete(result)
+                                self.myListArray.remove(at: indexPath.row)
+                                self.myIdArray.remove(at: indexPath.row)
+                                self.myTableList.reloadData()
+                                do {
+                                    try context.save()
+                                } catch {
+                                    print("CoreData Saving Problem...")
+                                }
+                                break
+                            }
+                            
+                        }
+                    }
+                }             
+            }catch {
+                print("Some Filtering Problem...")
+            }
+        }
+    }
+    
