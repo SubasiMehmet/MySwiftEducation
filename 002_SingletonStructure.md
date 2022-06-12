@@ -6,7 +6,9 @@
 > SWIFT CLASS FOR SINGLETON
 ---
 
-'''' import Foundation
+''' 
+import Foundation
+''' 
 
 class ListModel{
     
