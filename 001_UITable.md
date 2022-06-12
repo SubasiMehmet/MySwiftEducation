@@ -96,8 +96,8 @@
     }
     
 
-> MARK: - Delete a Row in a UITable
-> MARK: - THIS ONLY SHOW ANIMATIOS. ARRAY SHOUL BE ARRANGED AGAIN WITH SELECTED ROW LIKE BELOW
+> MARK: - DELETE A ROW IN THE UITABLE
+> MARK: - THIS ONLY SHOW ANIMATIOS. ARRAY SHOULD BE ARRANGED AGAIN WITH SELECTED ROW LIKE BELOW
 ---
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
