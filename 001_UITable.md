@@ -6,9 +6,9 @@
 
 ---
 > PRE-NOTE
-#### viewDidLoad**
-#### viewDidLayoutSubviews**
-#### layoutSubviews**
+#### viewDidLoad
+#### viewDidLayoutSubviews
+#### layoutSubviews
 ---
 
     let tableView : UITableView = {
