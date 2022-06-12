@@ -4,19 +4,20 @@
 ---
 
 > SWIFT CLASS FOR SINGLETON
+
+
+> MARK: IN THIS SINGLETON MODEL, IT IS DESIRED **listName** and **listUUID** TRANSFER TO OTHER ViewController BY UPON OBJECT OF **sharedInstance**
 ---
 
-```
-import Foundation
-```
+    import Foundation
 
-class ListModel{
+    class ListModel{
     
     static let sharedInstance = ListModel()
     
     var listName = ""
     var listUUID = UUID()
     
-    
     private init(){}
-}
+    }
+
