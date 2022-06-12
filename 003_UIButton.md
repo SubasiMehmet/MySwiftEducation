@@ -17,7 +17,7 @@
                 button1.backgroundColor = .white
                 button1.setTitle("\(x+1+(3*y))", for: UIControl.State.normal)
                 
-> MARK: Buttons Are Assigned with Tag.
+> MARK: Buttons Are Assigned to Tags and Functions
 >       
                 button1.tag = (x+2)+(3*y)
                 button1.addTarget(self, action: #selector(numberPressed(_:)), for: UIControl.Event.touchUpInside)
@@ -30,7 +30,9 @@
     }
     
 
-> MARK: Buttons' Press Function Is Controlled With Tag
+> MARK: Buttons' Press Function Is Controlled With Tag. 
+
+> Check the @objc func type. It is with parameter called sender. Because they are created with for, func needs to recognize them with their sender.
 ---
         @objc func numberPressed(_ sender: UIButton) {
         
