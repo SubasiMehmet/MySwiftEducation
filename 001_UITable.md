@@ -159,8 +159,6 @@
 ---
 ---
     
-## TABLEVIEWCELL CLASS // UITABLEVIEWCELL
-
 ### class WordsTableListViewCell: UITableViewCell {
     
 
