@@ -11,9 +11,8 @@
         return tableView
     }()
 
----
-
 > MARK: - UITABLEVIEW IS CREATED AS VARIABLE
+---
 
     override func viewDidLoad() {
         super.viewDidLoad()
