@@ -27,7 +27,6 @@
                 holder.addSubview(button1)
             }
         }
-
     }
     
 
@@ -45,4 +44,4 @@
         }else if let text = resultTextField.text {
             resultTextField.text = text + "\(tag)"
         }
-    ** }
+    }
