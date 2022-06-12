@@ -49,7 +49,7 @@
 
 **viewWillAppar**
 
-override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.listTextField.text = ListModel.sharedInstance.listName
         self.UUIDTextLabel.text = ListModel.sharedInstance.listUUID.uuidString
     
