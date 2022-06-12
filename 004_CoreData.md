@@ -54,7 +54,7 @@
         myIdArray.removeAll(keepingCapacity: false)
         myListArray.removeAll(keepingCapacity: false)
         
-        
+> MARK: - Creating variable for CoreData
 > MARK: - Creating variable for CoreData
 > ---
 
