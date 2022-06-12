@@ -27,15 +27,15 @@
     
     }
     
-======
+====== // MARK: - DETERMINE THAT UITABLE RETURN HOW MANY CELLS
     
-   
-    
+       
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
-======
+====== // MARK: - CELL CONTENT
+====== // MARK: - DECIDE FOR EACH ROW WITH IF STATEMENT BY USING PROTOTYPE CELLS CLASSES
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -61,7 +61,7 @@
         }
     }
    
-======
+====== // MARK: - CELL HEIGHT
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row < 1 {
@@ -70,7 +70,7 @@
         return view.frame.height / 12
     }
     
-======
+====== // MARK: - WHAT WILL HAPPEN WHEN THAT ROW IS SELECTED
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let listModel = ListModel.sharedInstance
@@ -79,8 +79,7 @@
         performSegue(withIdentifier: "toDetailVC", sender: nil)
     }
     
-======
-// MARK: - Delete a Row in a UITable
+====== // MARK: - Delete a Row in a UITable
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
