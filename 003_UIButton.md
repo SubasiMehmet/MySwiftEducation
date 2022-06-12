@@ -33,7 +33,7 @@
 
 > MARK: Buttons' Press Function Is Controlled With Tag
 ---
-        **@objc func numberPressed(_ sender: UIButton) {
+        @objc func numberPressed(_ sender: UIButton) {
         
         let tag  = sender.tag - 1
         //sender.flash()
