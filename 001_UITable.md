@@ -2,7 +2,7 @@
 
 ## Class View Controller
 
-    class WordsVC: UIViewController {
+    class WordsVC: UIViewController: UITableViewDelegate, UITableViewDataSource {
 
     let tableView : UITableView = {
         let tableView = UITableView()
@@ -27,14 +27,15 @@
     
     }
     
-    ======
+======
     
-    extension WordsVC: UITableViewDelegate, UITableViewDataSource {
+   
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
+======
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -59,11 +60,22 @@
             return cell
         }
     }
-    
+   
+======
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row < 1 {
             return view.frame.height / 15
         }
         return view.frame.height / 12
+    }
+    
+======
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let listModel = ListModel.sharedInstance
+        listModel.listName = myListArray[indexPath.row]
+        listModel.listUUID = myIdArray[indexPath.row]
+        performSegue(withIdentifier: "toDetailVC", sender: nil)
     }
   
