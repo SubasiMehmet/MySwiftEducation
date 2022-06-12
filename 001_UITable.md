@@ -1,8 +1,8 @@
 # UITable with Different Prototype Cells
 
-## Class View Controller
+## View Controller CLASS // UIVIEWCONTROLLER
 
-    class WordsVC: UIViewController: UITableViewDelegate, UITableViewDataSource {
+### class WordsVC: UIViewController: UITableViewDelegate, UITableViewDataSource {
 
     let tableView : UITableView = {
         let tableView = UITableView()
@@ -10,6 +10,10 @@
         tableView.register(AddRowTableViewCell.self, forCellReuseIdentifier: AddRowTableViewCell.identifier)
         return tableView
     }()
+    
+====== 
+
+// MARK: - UITABLEVIEW IS CREATED AS VARIABLE
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +21,10 @@
         view.addSubview(tableView)
     }
     
+====== 
+
+// MARK: - UITABLEVIEW IS ADDED LIKE THIS BECAUSE IT IS A SUBVIEW
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -77,6 +85,7 @@
     }
     
 ====== 
+
 // MARK: - WHAT WILL HAPPEN WHEN THAT ROW IS SELECTED
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -87,6 +96,7 @@
     }
     
 ====== 
+
 // MARK: - Delete a Row in a UITable
 // MARK: - THIS ONLY SHOW ANIMATIOS. ARRAY SHOUL BE ARRANGED AGAIN WITH SELECTED ROW LIKE BELOW
 
@@ -134,3 +144,21 @@
         }
     }
     
+    
+## TABLEVIEWCELL CLASS // UITABLEVIEWCELL
+
+### class WordsTableListViewCell: UITableViewCell {
+    
+====== 
+
+// MARK: - Delete a Row in a UITable
+    
+    static let identifier = "WordsTableViewCell"
+    
+       
+    var myImageView : UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Flintstone")
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
