@@ -21,7 +21,7 @@
         view.addSubview(tableView)
     }
     
-====== 
+---
 
 > MARK: - UITABLEVIEW IS ADDED LIKE THIS BECAUSE IT IS A SUBVIEW
 
@@ -35,7 +35,7 @@
     
     }
     
-====== 
+---
 
 > MARK: - DETERMINE THAT UITABLE RETURN HOW MANY CELLS
     
@@ -44,7 +44,7 @@
         return 10
     }
     
-====== 
+---
 
 > MARK: - CELL CONTENT
 > MARK: - DECIDE FOR EACH ROW WITH IF STATEMENT BY USING PROTOTYPE CELLS CLASSES
@@ -73,7 +73,7 @@
         }
     }
    
-====== 
+---
 
 > MARK: - CELL HEIGHT
 
@@ -84,7 +84,7 @@
         return view.frame.height / 12
     }
     
-====== 
+---
 
 > MARK: - WHAT WILL HAPPEN WHEN THAT ROW IS SELECTED
 
@@ -95,7 +95,7 @@
         performSegue(withIdentifier: "toDetailVC", sender: nil)
     }
     
-====== 
+---
 
 > MARK: - Delete a Row in a UITable
 > MARK: - THIS ONLY SHOW ANIMATIOS. ARRAY SHOUL BE ARRANGED AGAIN WITH SELECTED ROW LIKE BELOW
@@ -149,13 +149,13 @@
 
 ### class WordsTableListViewCell: UITableViewCell {
     
-====== 
+--- 
 
 > MARK: - IDENTIFIER IS THE MOST IMPORTANT ISSUE ABOUT TABLEVIEWCELL
     
     static let identifier = "WordsTableViewCell"
     
-======    
+---  
    
 > MARK: - ADDING SOMETHING AS SUBVIEW INSIDE OF THE CELL
  
@@ -166,7 +166,7 @@
         return imageView
     }()
     
-======    
+---  
    
 > MARK: - INITIALIZER OF TABLEVIEWCELL
 > MARK: - IT IS ADDED ALWAYS // (THERE ARE SOME DIFFERENT WAYS TO CREATE BUT UNNECESSARY)
