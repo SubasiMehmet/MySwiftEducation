@@ -1,11 +1,16 @@
 # CORE DATA
 
-![Screen Shot 2022-06-12 at 18 17 23](https://user-images.githubusercontent.com/50085545/173240133-7400f622-b559-447b-8472-2c7e4c844538.png)
+
 
 > Core Data works with Database logic. Thanks to Core Data, **large data** can be saved inside of the device.
 
 > Furthermore, while fetching, data can be filtered and loaded.
 ---
+---
+![Screen Shot 2022-06-12 at 18 17 23](https://user-images.githubusercontent.com/50085545/173240133-7400f622-b559-447b-8472-2c7e4c844538.png)
+---
+---
+> After Some Settings...
 
 ## Saving Core Data
 
