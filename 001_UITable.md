@@ -13,7 +13,7 @@
     
 ====== 
 
-// MARK: - UITABLEVIEW IS CREATED AS VARIABLE
+> MARK: - UITABLEVIEW IS CREATED AS VARIABLE
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@
     
 ====== 
 
-// MARK: - UITABLEVIEW IS ADDED LIKE THIS BECAUSE IT IS A SUBVIEW
+> MARK: - UITABLEVIEW IS ADDED LIKE THIS BECAUSE IT IS A SUBVIEW
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -37,7 +37,7 @@
     
 ====== 
 
-// MARK: - DETERMINE THAT UITABLE RETURN HOW MANY CELLS
+> MARK: - DETERMINE THAT UITABLE RETURN HOW MANY CELLS
     
        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,8 +46,8 @@
     
 ====== 
 
-// MARK: - CELL CONTENT
-// MARK: - DECIDE FOR EACH ROW WITH IF STATEMENT BY USING PROTOTYPE CELLS CLASSES
+> MARK: - CELL CONTENT
+> MARK: - DECIDE FOR EACH ROW WITH IF STATEMENT BY USING PROTOTYPE CELLS CLASSES
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -75,7 +75,7 @@
    
 ====== 
 
-// MARK: - CELL HEIGHT
+> MARK: - CELL HEIGHT
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row < 1 {
@@ -97,8 +97,8 @@
     
 ====== 
 
-// MARK: - Delete a Row in a UITable
-// MARK: - THIS ONLY SHOW ANIMATIOS. ARRAY SHOUL BE ARRANGED AGAIN WITH SELECTED ROW LIKE BELOW
+> MARK: - Delete a Row in a UITable
+> MARK: - THIS ONLY SHOW ANIMATIOS. ARRAY SHOUL BE ARRANGED AGAIN WITH SELECTED ROW LIKE BELOW
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -151,7 +151,7 @@
     
 ====== 
 
-// MARK: - Delete a Row in a UITable
+> MARK: - Delete a Row in a UITable
     
     static let identifier = "WordsTableViewCell"
     
