@@ -86,7 +86,7 @@
     
 ====== 
 
-// MARK: - WHAT WILL HAPPEN WHEN THAT ROW IS SELECTED
+> MARK: - WHAT WILL HAPPEN WHEN THAT ROW IS SELECTED
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let listModel = ListModel.sharedInstance
@@ -151,14 +151,32 @@
     
 ====== 
 
-> MARK: - Delete a Row in a UITable
+> MARK: - IDENTIFIER IS THE MOST IMPORTANT ISSUE ABOUT TABLEVIEWCELL
     
     static let identifier = "WordsTableViewCell"
     
-       
+======    
+   
+> MARK: - ADDING SOMETHING AS SUBVIEW INSIDE OF THE CELL
+ 
     var myImageView : UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Flintstone")
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
+    
+======    
+   
+> MARK: - INITIALIZER OF TABLEVIEWCELL
+> MARK: - IT IS ADDED ALWAYS // (THERE ARE SOME DIFFERENT WAYS TO CREATE BUT UNNECESSARY)
+
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        contentView.addSubview(myImageView)
+        contentView.addSubview(myCategoryNameLabel)
+        contentView.addSubview(myCompletionLabel)
+    }
+    
