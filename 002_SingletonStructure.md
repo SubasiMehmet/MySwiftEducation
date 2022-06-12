@@ -1,1 +1,5 @@
-asd
+# Singleton Structure 
+
+> SINGLETON STRUCTURE IS USED TO TRANSFER OBJECT TO ANY OTHER ViewController
+---
+ 
