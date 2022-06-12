@@ -13,6 +13,9 @@
 
 
 > MARK: - UITABLEVIEW IS CREATED AS VARIABLE
+
+> **viewDidLoad**
+
 ---
 
     override func viewDidLoad() {
@@ -23,6 +26,8 @@
     
 
 > MARK: - UITABLEVIEW IS ADDED LIKE THIS BECAUSE IT IS A SUBVIEW
+
+> **viewDidLayoutSubviews**
 ---
 
     override func viewDidLayoutSubviews() {
@@ -187,6 +192,8 @@
     
     
 > MARK: - ORGANAZING THE CELL
+
+> **layoutSubviews**
 ---    
         override func layoutSubviews() {
         super.layoutSubviews()
