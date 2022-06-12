@@ -6,7 +6,7 @@
 > Furthermore, while fetching, data can be filtered and loaded.
 ---
 
-### @objc func saveButtonTapped(){
+    @objc func saveButtonTapped(){
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -27,7 +27,7 @@
         }catch{
             print("Saving Problem Occured...")
         }
-  ### }      
+    }      
 
 
 --- 
