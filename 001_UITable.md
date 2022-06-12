@@ -1,4 +1,4 @@
-#Class View Controller
+# Class View Controller
 
 
 
@@ -9,7 +9,7 @@
         return tableView
     }()
 
-override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         view.addSubview(tableView)
