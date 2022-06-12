@@ -98,6 +98,7 @@
     
 
 > MARK: - DELETE A ROW IN THE UITABLE
+
 > MARK: - THIS ONLY SHOW ANIMATIOS. ARRAY SHOULD BE ARRANGED AGAIN WITH SELECTED ROW LIKE BELOW
 ---
 
@@ -171,7 +172,8 @@
     
 
 > MARK: - INITIALIZER OF TABLEVIEWCELL
-> MARK: - IT IS ADDED ALWAYS // (THERE ARE SOME DIFFERENT WAYS TO CREATE BUT UNNECESSARY)
+
+> MARK: - IT IS ADDED ALWAYS // (There are some different ways to create but this is enough)
 ---
 
 
@@ -181,5 +183,31 @@
         contentView.addSubview(myImageView)
         contentView.addSubview(myCategoryNameLabel)
         contentView.addSubview(myCompletionLabel)
+    }
+    
+    
+> MARK: - ORGANAZING THE CELL
+---    
+        override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        
+        myImageView.frame = CGRect(x: 5,
+                                   y: 5,
+                                   width: (contentView.frame.size.width / 7),
+                                   height: contentView.frame.size.height - 6)
+                                   
+        let myImageViewFrame = myImageView.frame
+        
+        myImageView.layer.masksToBounds  = true
+        myImageView.layer.cornerRadius = 40
+        
+        myCategoryNameLabel.frame = CGRect(x: myImageViewFrame.maxX + 15,
+                                           y: myImageViewFrame.minY,
+                                           width: contentView.frame.size.width / 1.56 ,
+                                           height: myImageViewFrame.height)
+        
+        let myCategoryNameLabelFrame = myCategoryNameLabel.frame
+
     }
     
