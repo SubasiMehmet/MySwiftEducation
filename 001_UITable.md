@@ -28,6 +28,7 @@
     }
     
 ====== 
+
 // MARK: - DETERMINE THAT UITABLE RETURN HOW MANY CELLS
     
        
@@ -36,6 +37,7 @@
     }
     
 ====== 
+
 // MARK: - CELL CONTENT
 // MARK: - DECIDE FOR EACH ROW WITH IF STATEMENT BY USING PROTOTYPE CELLS CLASSES
     
@@ -64,6 +66,7 @@
     }
    
 ====== 
+
 // MARK: - CELL HEIGHT
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
