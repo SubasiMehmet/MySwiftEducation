@@ -18,12 +18,12 @@
                 button1.setTitle("\(x+1+(3*y))", for: UIControl.State.normal)
                 
 > MARK: Buttons Are Assigned to Tags and Functions
->       
+---
                 button1.tag = (x+2)+(3*y)
                 button1.addTarget(self, action: #selector(numberPressed(_:)), for: UIControl.Event.touchUpInside)
                 
 > MARK: Buttons Are Added to View (In this case, to a special view named "holder")
-
+---
                 holder.addSubview(button1)
             }
         }
@@ -47,3 +47,35 @@
             resultTextField.text = text + "\(tag)"
         }
     }
+
+---
+  
+## Some Animation to Press Buttons
+> MARK: For instance, It can be used like **sender.pulsate**
+---
+
+    extension UIButton {
+    func pulsate() {
+    let pulse = CASpringAnimation(keyPath: "transform.scale")
+    pulse.duration = 0.4
+    pulse.fromValue = 0.98
+    pulse.toValue = 1.0
+    pulse.autoreverses = false
+    pulse.repeatCount = 0
+    pulse.initialVelocity = 0.5
+    pulse.damping = 1
+    layer.add(pulse, forKey: nil)
+    }
+
+    // Not used for this app.
+    func flash() {
+    let flash = CABasicAnimation(keyPath: "opacity")
+    flash.duration = 0.3
+    flash.fromValue = 1
+    flash.toValue = 0.1
+    flash.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+    flash.autoreverses = false
+    flash.repeatCount = 0
+    layer.add(flash, forKey: nil)
+    }
+}
