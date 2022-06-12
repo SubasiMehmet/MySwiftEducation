@@ -1,7 +1,5 @@
 # UITable with Different Prototype Cells
 
-## View Controller CLASS // UIVIEWCONTROLLER
-
 ### class WordsVC: UIViewController: UITableViewDelegate, UITableViewDataSource {
 
 ---
