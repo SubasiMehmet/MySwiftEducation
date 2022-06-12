@@ -2,7 +2,7 @@
 
 
 
-> MARK: SAVE SOMETHING WITH UserDefaults()
+> MARK: Save Something With UserDefaults()
 ---
 
 
@@ -22,4 +22,14 @@
     
     
 > MARK: Fetch Something With UserDefaults()
+---
+     for x in 0..<count {
+            if let task = UserDefaults().value(forKey: "task_\(x+1)") as? String {
+                tasks.append(task)
+            }
+        }
+        
+        tableView.reloadData()
+
+> MARK: UserDefaults() is not a good way to save variables. It does not use logic of database. It only saves dictionary. It is only available for small data. CoreData is slower but better.
 ---
