@@ -11,6 +11,7 @@
         return tableView
     }()
 
+
 > MARK: - UITABLEVIEW IS CREATED AS VARIABLE
 ---
 
@@ -20,9 +21,9 @@
         view.addSubview(tableView)
     }
     
----
 
 > MARK: - UITABLEVIEW IS ADDED LIKE THIS BECAUSE IT IS A SUBVIEW
+---
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -43,11 +44,11 @@
         return 10
     }
     
----
 
 > MARK: - CELL CONTENT
 > MARK: - DECIDE FOR EACH ROW WITH IF STATEMENT BY USING PROTOTYPE CELLS CLASSES
-    
+ ---
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row < 1 {
@@ -72,9 +73,9 @@
         }
     }
    
----
 
 > MARK: - CELL HEIGHT
+---
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row < 1 {
@@ -83,9 +84,9 @@
         return view.frame.height / 12
     }
     
----
 
 > MARK: - WHAT WILL HAPPEN WHEN THAT ROW IS SELECTED
+---
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let listModel = ListModel.sharedInstance
@@ -94,10 +95,10 @@
         performSegue(withIdentifier: "toDetailVC", sender: nil)
     }
     
----
 
 > MARK: - Delete a Row in a UITable
 > MARK: - THIS ONLY SHOW ANIMATIOS. ARRAY SHOUL BE ARRANGED AGAIN WITH SELECTED ROW LIKE BELOW
+---
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -142,22 +143,24 @@
             }
         }
     }
-    
+ 
+---
+---
     
 ## TABLEVIEWCELL CLASS // UITABLEVIEWCELL
 
 ### class WordsTableListViewCell: UITableViewCell {
     
---- 
 
 > MARK: - IDENTIFIER IS THE MOST IMPORTANT ISSUE ABOUT TABLEVIEWCELL
+---
     
     static let identifier = "WordsTableViewCell"
     
----  
-   
+
 > MARK: - ADDING SOMETHING AS SUBVIEW INSIDE OF THE CELL
- 
+ ---
+
     var myImageView : UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Flintstone")
@@ -165,10 +168,10 @@
         return imageView
     }()
     
----  
-   
+
 > MARK: - INITIALIZER OF TABLEVIEWCELL
 > MARK: - IT IS ADDED ALWAYS // (THERE ARE SOME DIFFERENT WAYS TO CREATE BUT UNNECESSARY)
+---
 
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
