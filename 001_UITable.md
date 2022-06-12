@@ -10,8 +10,8 @@
         tableView.register(AddRowTableViewCell.self, forCellReuseIdentifier: AddRowTableViewCell.identifier)
         return tableView
     }()
-====== 
 
+---
 
 > MARK: - UITABLEVIEW IS CREATED AS VARIABLE
 
