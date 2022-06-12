@@ -7,10 +7,11 @@
 > Furthermore, while fetching, data can be filtered and loaded.
 ---
 ---
+> Firstly, Make This Settings...
 ![Screen Shot 2022-06-12 at 18 17 23](https://user-images.githubusercontent.com/50085545/173240133-7400f622-b559-447b-8472-2c7e4c844538.png)
 ---
 ---
-> After Some Settings...
+
 
 ## Saving Core Data
 
