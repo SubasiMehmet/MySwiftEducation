@@ -19,7 +19,7 @@
     let items = try! fm.contentsOfDirectory(atPath: path)
     
 > NOTE: Creating bundle, usage of ! is totally safe because every app needs to have a bundle (file directory)    
----
+
         
 > MARK: Adding the files' names (images' names) to the list as String
 --- 
