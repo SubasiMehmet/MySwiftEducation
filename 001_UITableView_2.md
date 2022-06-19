@@ -17,10 +17,21 @@
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
         cell.textLabel?.text = pictures[indexPath.row]
-        //MARK: Change the font of the textLabel - CH
-       // cell.textLabel?.font = .systemFont(ofSize: 20)
+        //MARK: Change the font of the textLabel
+        // cell.textLabel?.font = .systemFont(ofSize: 20)
         return cell
     }
     
     
 > MARK:With this function, it is defined that which cell is returned in which row. Different prototype cells is returned in different rows.
+
+
+--- 
+> MARK: Everycell has a text label as default. Thanks to this, text can be added and shown directly.
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = ...
+        cell.textLabel?.text = pictures[indexPath.row]
+        // cell.textLabel?.font = .systemFont(ofSize: 20)
+        return cell
+    }
