@@ -1,4 +1,5 @@
 # UITABLEVIEW()
+### tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
 
 > If protoype cell is created with StoryBoard, cell need to have a identifier.
 
@@ -7,7 +8,7 @@
 
 
 ---
-### tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
+
 
 > MARK: With this identifier, the cell is put to function.
 
