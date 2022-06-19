@@ -6,8 +6,13 @@
 --- 
 
 
+> Creating File Manager
     let fm = FileManager.default
+    
+> Creating Path
     let path = Bundle.main.resourcePath!
+    
+> Fetching All Items from the Bundle
     let items = try! fm.contentsOfDirectory(atPath: path)
         
 > MARK: Adding the files' names (images' names) to the list as String
