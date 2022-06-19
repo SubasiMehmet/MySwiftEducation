@@ -32,6 +32,6 @@
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ...
         cell.textLabel?.text = pictures[indexPath.row]
-        // cell.textLabel?.font = .systemFont(ofSize: 20)
+        cell.textLabel?.font = .systemFont(ofSize: 20)
         return cell
     }
