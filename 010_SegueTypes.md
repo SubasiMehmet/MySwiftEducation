@@ -19,8 +19,8 @@
 
 > A segue can be defined with code.
 
-    let mainSB = UIStoryboard(name: "Main", bundle: Bundle.main)
-    let customVC = mainSB.instantiateViewController(withIdentifier: "customVC")      
+    let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+    let customVC = mainStoryBoard.instantiateViewController(withIdentifier: "customVC")      
 
     customVC.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
     present(customVC, animated: true)
