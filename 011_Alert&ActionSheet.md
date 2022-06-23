@@ -41,7 +41,7 @@
 
 # ACTION SHEET
 
- // MARK: - Action Sheet ve Adding Actions
+**MARK: - Action Sheet ve Adding Actions**
  
     @objc func openTapped(){
         let actionSheet = UIAlertController(title: "Open page...", message: nil, preferredStyle: .actionSheet)
