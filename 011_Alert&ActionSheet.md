@@ -33,15 +33,26 @@
         self.present(alert, animated: true, completion: nil)
         self.askQuestion()
         
----
+
 > **Best practice to create alert is creating function like Alert(title: String, message: String)**
 
 
+---
 
+# ACTION SHEET
 
+ // MARK: - Action Sheet ve Adding Actions
+        @objc func openTapped(){
+            let actionSheet = UIAlertController(title: "Open page...", message: nil, preferredStyle: .actionSheet)
+            actionSheet.addAction(UIAlertAction(title: "apple.com", style: .default, handler: openPage))
+            actionSheet.addAction(UIAlertAction(title: "hackingwithswift.com", style: .default, handler: openPage))
+            actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            actionSheet.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem  // For iPads
+            present(actionSheet, animated: true)
+    }
 
-
-
-
-
-
+     func openPage(action: UIAlertAction){
+        guard let actionTitle = action.title else {return}
+        if let url = URL(string: "https://" + actionTitle) {
+            webView.load(URLRequest(url: url))
+        }
