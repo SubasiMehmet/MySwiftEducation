@@ -1,7 +1,23 @@
 # Alert
 
+---
+> Creating Alert
 
-> MARK: Creating alert after an alert. It uses like nested alert. Other alert is added to first one's button's action.
+    let alert = UIAlertController(title: "Current Score", message: "\(self.score)", preferredStyle: UIAlertController.Style.alert)
+    let button = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+    alert.addAction(button)
+    present(alert, animated: true)
+
+> OR
+
+        let alert = UIAlertController(title: title, message: "Your score is \(score)" , preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: UIAlertAction.Style.default, handler: { handler in
+            self.askQuestion()
+        }))
+        present(alert, animated: true)
+        
+
+> Creating alert after an alert. It uses like nested alert. Other alert is added to first one's button's action.
         
         let alert = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: UIAlertController.Style.alert)
         let finalButton = UIAlertAction(title: "Continue", style: UIAlertAction.Style.default, handler: nil)
@@ -16,3 +32,16 @@
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)
         self.askQuestion()
+        
+---
+> **Best practice to create alert is creating function like Alert(title: String, message: String)**
+
+
+
+
+
+
+
+
+
+
