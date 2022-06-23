@@ -52,6 +52,8 @@
         present(actionSheet, animated: true)
     }
 
+> Giving action title as parameter to another function and managing handler
+
      func openPage(action: UIAlertAction){
         guard let actionTitle = action.title else {return}
         if let url = URL(string: "https://" + actionTitle) {
