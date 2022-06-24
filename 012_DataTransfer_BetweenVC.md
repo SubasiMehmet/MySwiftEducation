@@ -14,7 +14,7 @@
 
 ## Variable Direct Transfer (1 -> 2)
 
-**ViewController {
+**ViewController {**
 
     let textToTransfer = "Hello World"
     
@@ -32,7 +32,7 @@
 **}**
 
 
-**SecondVC {
+**SecondVC {**
 
     @IBOutlet var myLabel: UILabel!
     var transferredText = ""
