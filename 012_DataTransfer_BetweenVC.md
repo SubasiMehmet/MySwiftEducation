@@ -134,4 +134,47 @@
 **}**
 
 
+## 4. Closure (2 -> 1)
+
+> Protocol is not used but it is not a perfect way to increase readability of the code.
+
+    
+**SecondVC {**
+    var dataTransferClosure: ((String) -> Void)?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    @IBAction func GoBack(_ sender: UIButton) {
+        dismiss(animated: true) { [weak self] in
+            self?.dataTransferClosure?(sender.titleLabel!.text!)
+            //self?.dataTransferClosure?((sender.titleLabel?.text!)!)
+            
+        }
+    }
+**}**
+
+
+**ViewController {**
+    @IBOutlet var myLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSecondVC" {
+            if let secondVC = segue.destination as? SecondVC {
+                secondVC.dataTransferClosure = { [weak self] phoneNumber in
+                    self?.myLabel.text = phoneNumber
+                }
+            }
+        }
+    }
+
+**}**
+
+
+
 
