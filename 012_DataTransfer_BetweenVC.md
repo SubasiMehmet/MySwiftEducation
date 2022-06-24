@@ -29,7 +29,7 @@
         present(secondVC, animated: true)
         
     }
-**}
+**}**
 
 
 **SecondVC {
@@ -41,4 +41,4 @@
         super.viewDidLoad()
         myLabel.text = transferredText
     }
-**}
+**}**
