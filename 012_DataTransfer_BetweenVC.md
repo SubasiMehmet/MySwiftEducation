@@ -79,3 +79,56 @@
     }
 **}**
 
+---
+---
+## 3. Delegation (2 -> 1)
+
+> Protocol is necessary
+**Protocol**
+    protocol DataTransferrable {
+    func onEmergencyStatus(phoneNumber: String)
+    }
+**SecondVC {**
+
+    var emergencyDelegateVariable : DataTransferrable?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+        @IBAction func emergencyBtnPressed(_ sender: UIButton) {
+            dismiss(animated: true) 
+            self.emergencyDelegateVariable?.onEmergencyStatus(phoneNumber: sender.titleLabel!.text!)
+        }
+  
+**}**
+
+
+**ViewController {**
+
+    @IBOutlet var myLabel: UILabel!
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view. 
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "delegationSegue" {
+            if let secondVC = segue.destination as? SecondVC {
+                secondVC.emergencyDelegateVariable = self
+            }
+        }
+    }
+
+    
+    func onEmergencyStatus(phoneNumber: String) {
+        myLabel.text = phoneNumber
+        print("Acil bir durumda \(phoneNumber) numarasını arayın")
+    }
+
+**}**
+
+
+
