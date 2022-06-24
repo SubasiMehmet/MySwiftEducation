@@ -140,6 +140,7 @@
 
     
 **SecondVC {**
+
     var dataTransferClosure: ((String) -> Void)?
     
     override func viewDidLoad() {
@@ -153,10 +154,12 @@
             
         }
     }
+    
 **}**
 
 
 **ViewController {**
+
     @IBOutlet var myLabel: UILabel!
     
     override func viewDidLoad() {
