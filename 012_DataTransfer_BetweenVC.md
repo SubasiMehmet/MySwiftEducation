@@ -84,10 +84,13 @@
 ## 3. Delegation (2 -> 1)
 
 > Protocol is necessary
+
 **Protocol**
+
     protocol DataTransferrable {
     func onEmergencyStatus(phoneNumber: String)
     }
+    
 **SecondVC {**
 
     var emergencyDelegateVariable : DataTransferrable?
