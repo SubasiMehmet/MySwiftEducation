@@ -2,17 +2,17 @@
 
 > **There are some method to transfer data**
 
-1. Variable Direct Transfer
-2. Segue
-3. Delegation
-4. Closure
-5. Singleton
+1. Variable Direct Transfer (1 -> 2)
+2. Segue (1 -> 2)
+3. Delegation (2 -> 1)
+4. Closure (2 -> 1)
+5. Singleton (1 -> 2)
 
 > In this page, Singleton Method will not be covered.
 
 ---
 
-## Variable Direct Transfer (1 -> 2)
+## 1. Variable Direct Transfer (1 -> 2)
 
 **ViewController {**
 
@@ -42,3 +42,40 @@
         myLabel.text = transferredText
     }
 **}**
+
+
+---
+---
+## 2. Segue (1 -> 2)
+
+> Pretty Similar / Almost Same With First Method
+
+**ViewController {**
+
+    var textToTransfer = "Hello World!"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToSecondVC" {
+            if let secondVC = segue.destination as? secondVC {
+                secondVC.transferredText = textToTransfer
+            }
+        }
+    }  
+**}**
+
+
+**SecondVC {**
+
+    @IBOutlet var myLabel: UILabel!
+    var transferredText = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()     
+        myLabel.text = transferredText 
+    }
+**}**
+
