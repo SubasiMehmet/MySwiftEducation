@@ -13,11 +13,22 @@
         
         
         
+ ### Toolbar Buttons    
         
-        
-        
-        //MARK: - Toolbar Buttons / Items
+> It adds a Toolbar Button Item that is written "Open" on bottom
+
+> Spacer is the pretty important to arranges button on toolbar. It gives space and fil all the other empty space.
+ 
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
         let forward = UIBarButtonItem(title: "Forward", style: .plain, target: webView, action: #selector(webView.goForward))
         let backward = UIBarButtonItem(title: "Backward", style: .plain, target: webView, action: #selector(webView.goBack))
+
+        
+> Thanks to spacer button, refresh button is placed on the right
+
+        toolbarItems = [backward, forward, spacer, refresh]
+        
+> Final setting
+     
+        navigationController?.isToolbarHidden = false
