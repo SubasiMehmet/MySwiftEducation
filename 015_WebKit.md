@@ -10,8 +10,9 @@
  > Create a WKWebView variable
  
     var webView : WKWebView!
-    
-**override func loadView {**   // It must precede viewDidLoad
+
+// It must precede viewDidLoad
+**override func loadView {**   
     
         webView = WKWebView()
         webView.navigationDelegate = self
