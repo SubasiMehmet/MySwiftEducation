@@ -87,7 +87,7 @@ var progressView : UIProgressView!
     
 ## Web Site Allowance Policy
 
-> If if host.contains(webSite) is not true, this website cannot be visited.
+> If if host.contains(webSite) is not true, this website cannot be visited. (Host is like www.apple.com or apple.com)
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         
