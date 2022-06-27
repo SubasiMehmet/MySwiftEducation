@@ -11,7 +11,7 @@
  
     var webView : WKWebView!
     
-> **override func loadView {**   // It must precede viewDidLoad
+**override func loadView {**   // It must precede viewDidLoad
     
         webView = WKWebView()
         webView.navigationDelegate = self
@@ -20,7 +20,7 @@
 **}**
     
     
-> **override func viewDidLoad {**   
+**override func viewDidLoad {**   
 
 
 
