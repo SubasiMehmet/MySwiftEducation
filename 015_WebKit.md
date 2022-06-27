@@ -59,12 +59,7 @@
         toolbarItems = [progressButton, spacer, backward, forward, refresh]
         navigationController?.isToolbarHidden = false
         
-> KeyValue Observer for WKWebView.estimatedProgress
 
-        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
-      
-    }
-    
 > For www.apple.com.tr, webView title is Apple.
 
      func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
