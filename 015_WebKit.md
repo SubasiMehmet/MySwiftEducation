@@ -64,4 +64,52 @@
 
 
 var progressView : UIProgressView!
+
+**override func viewDidLoad() {**
+
+    progressView = UIProgressView(progressViewStyle: .default)
+    progressView.sizeToFit()
+    let progressButton = UIBarButtonItem(customView: progressView)
     
+> KeyValue Observer for WKWebView.estimatedProgress
+
+     webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
+    
+**}**
+
+> Change the loading progress regard of observer
+>
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "estimatedProgress" {
+            progressView.progress = Float(webView.estimatedProgress)
+        }
+    }
+    
+## Web Site Allowance Policy
+
+> If if host.contains(webSite) is not true, this website cannot be visited.
+
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        
+        let url = navigationAction.request.url
+            if url!.absoluteString.range(of: "about:blank") != nil {
+                decisionHandler(.cancel)
+                return
+            }
+        
+        //let url = navigationAction.request.url
+        if let host = url?.host{
+            for webSite in webSites {
+                if host.contains(webSite){
+                    decisionHandler(.allow)
+                    return
+                }
+            }
+        }
+        
+        giveAlert(title: "Blocked Website Trial", message: "This website has been blocked!")
+        decisionHandler(.cancel)
+    }
+    
+> if url!.absoluteString.range(of: "about:blank") != nil is controlled in this code because of some reason that I don't understand exatly, url returns "about:blank" sometimes.
+
