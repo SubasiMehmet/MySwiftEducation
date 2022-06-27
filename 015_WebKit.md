@@ -11,21 +11,18 @@
  
     var webView : WKWebView!
     
-> **override func loadView**   // It must precede viewDidLoad
-
-    override func loadView() {
-        super.loadView()
+> **override func loadView {**   // It must precede viewDidLoad
     
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
         
-    }
+**}**
     
     
-> **override func viewDidLoad**   
+> **override func viewDidLoad {**   
 
-    override func viewDidLoad() {
+
 
 ---
 > **Loading URL**
@@ -48,21 +45,22 @@
         let forward = UIBarButtonItem(title: "Forward", style: .plain, target: webView, action: #selector(webView.goForward))
         let backward = UIBarButtonItem(title: "Backward", style: .plain, target: webView, action: #selector(webView.goBack))
 
-> ProgressView Button on Toolbar for WebView
-
-        progressView = UIProgressView(progressViewStyle: .default)
-        progressView.sizeToFit()
-        let progressButton = UIBarButtonItem(customView: progressView)
         
 > Thanks to spacer button, refresh button is placed on the right // Just for extra information
  
         toolbarItems = [progressButton, spacer, backward, forward, refresh]
         navigationController?.isToolbarHidden = false
         
-
+**}**
+    
 > For www.apple.com.tr, webView title is Apple.
 
      func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         title = webView.title
     }
+    
+## Progress View Bar
+
+
+var progressView : UIProgressView!
     
