@@ -1,6 +1,6 @@
 # Data Transfer Between View Controller _ BACK - FORWARD
 
-> **There are some method to transfer data**
+> **There are some methods to transfer data**
 
 1. Variable Direct Transfer (1 -> 2)
 2. Segue (1 -> 2)
