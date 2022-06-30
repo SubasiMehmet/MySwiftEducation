@@ -1,4 +1,4 @@
-Small Note: For now, there is no Closures.md file. It will explain what closure is. This is some more detailed something abotu closures.
+Small Note: For now, there is no Closures.md file. It will explain what closure is. This is some more detailed something about closures.
 
 ## Capturing Closure with Trailing Closure
 
