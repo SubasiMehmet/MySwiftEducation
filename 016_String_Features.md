@@ -18,4 +18,6 @@
 
 > str.utf16.count is a better way than str.count
 
-> For example "±" might have 3 letter in real or as a format of UTF-32. .count method count it as 3 letter but .utf16 does not. It counts it as just 1 "one."
+> For example "±" might have 3 letter in real or as a format of UTF-32. .count method count it as 3 letter but .utf16 does not. It counts it as just 1 "one
+
+>Example is reacheable above, in the section of UITextChecker()
