@@ -21,7 +21,6 @@ Small Note: For now, there is no Closures.md file. It will explain what closure 
  > "Weak Capturing" is a good solution to prevent "memory leakage". More detail writes in "013_Strong_Weak_Unowned.md" file.
 
 **"in" is a compulsary usage**
-
 **"_" might be a variable but there is no need in this example.**
 
     {
