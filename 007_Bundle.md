@@ -3,8 +3,9 @@
 > Bundle is where the project is!
 
 > With Bundle, the files inside of the project file can be accesses.
---- 
 
+--- 
+## Reaching the files in Bundle
 
 > Creating File Manager
 
@@ -32,3 +33,19 @@
         }
         
     }
+    
+    
+    
+--- 
+## Reading inside of the .txt file in the Bundle (name: start.txt)
+
+    if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
+        if let startWords = try? String(contentsOf: startWordsURL) {
+            allWords = startWords.components(separatedBy: "\n") 
+        }
+    }
+
+> In the file named "start.txt", words are lined in different line. Because of that, "\n" (next line character) is used to take the other word. It means that words are seperated by "lines"
+
+
+
