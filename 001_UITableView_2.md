@@ -35,3 +35,8 @@
         cell.textLabel?.font = .systemFont(ofSize: 20)
         return cell
     }
+    
+    
+## ReloadData()
+
+> reloadData () will cause all our table view methods to be called again, including numberOfRowsInSection and cellForRowAt
