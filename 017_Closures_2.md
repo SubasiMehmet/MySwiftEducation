@@ -23,6 +23,8 @@ Small Note: For now, there is no Closures.md file. It will explain what closure 
 > **"in" is a compulsary usage**
 **"_" might be a variable but there is no need in this example.**
 
+
+    // CLOSURE
     {
     [weak self, weak ac] _ in   
     guard let answer = ac?.textFields?[0].text else {return}
