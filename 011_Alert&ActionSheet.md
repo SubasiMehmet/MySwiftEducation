@@ -1,10 +1,11 @@
 # Alert
 
 ---
-> Creating Alert
+> Creating Alert & Adding Button and Text Field
 
     let alert = UIAlertController(title: "Current Score", message: "\(self.score)", preferredStyle: UIAlertController.Style.alert)
     let button = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+    alert.addTextField()
     alert.addAction(button)
     present(alert, animated: true)
 
