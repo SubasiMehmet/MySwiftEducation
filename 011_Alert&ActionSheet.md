@@ -8,6 +8,10 @@
     alert.addTextField()
     alert.addAction(button)
     present(alert, animated: true)
+    
+>To take textField
+
+    guard let answer = ac?.textFields?[0].text else {return}
 
 > OR
 
