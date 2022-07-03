@@ -38,3 +38,11 @@
 ## remove(at: )
 
 > It removes at that place.
+
+## append()
+
+> It add an item to end of the list
+
+## insert(String:, at:)
+
+> It add an item to where you want.
