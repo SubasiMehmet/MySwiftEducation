@@ -21,3 +21,20 @@
 > For example "±" might have 3 letter in real or as a format of UTF-32. .count method count it as 3 letter but .utf16 does not. It counts it as just 1 "one
 
 >Example is reacheable above, in the section of UITextChecker()
+
+## firstIndex(of: )
+
+> returns 10 because that's where wonderful starts at
+
+    let someString = "This is a wonderful day"
+    let index = someString.firstIndex(of: "wonderful")! 
+
+
+## contains()
+
+> Return Boolean
+
+
+## remove(at: )
+
+> It removes at that place.
