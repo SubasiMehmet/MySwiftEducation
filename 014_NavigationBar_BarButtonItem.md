@@ -44,6 +44,10 @@ https://developer.apple.com/documentation/uikit/uinavigationcontroller/customizi
         self.title = "Strom Viewer"
         navigationController?.navigationBar.prefersLargeTitles = true
         
+        navigationController?.hidesBarsOnSwipe = true
+        navigationController?.hidesBottomBarWhenPushed = true
+        navigationController?.hidesBarsOnTap = true
+        
 ---  
         title = "Picture \(selectedImageNumber) of \(totalNumberOfImages)"
         navigationItem.largeTitleDisplayMode = .never
