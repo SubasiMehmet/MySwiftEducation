@@ -36,6 +36,8 @@
         
 ### Title & Appearance
 
+https://developer.apple.com/documentation/uikit/uinavigationcontroller/customizing_your_app_s_navigation_bar
+
 
 > Some extra settings
 
