@@ -36,7 +36,6 @@
         
 ### Title & Appearance
 
- sdsfd
 
 > Some extra settings
 
