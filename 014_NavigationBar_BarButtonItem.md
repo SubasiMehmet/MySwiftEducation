@@ -63,4 +63,42 @@ https://developer.apple.com/documentation/uikit/uinavigationcontroller/customizi
                 navigationController?.navigationBar.standardAppearance = appearance
                 navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
             }
+            
+---
+---
+
+> **A USEFUL EXTENSION**
+
+**extension UIViewController / UITableViewController {**
+
+    extension UITableViewController {
+    func configureNavigationBar(titleColor: UIColor, backgoundColor: UIColor, tintColor: UIColor, title: String, preferredLargeTitle: Bool) {
+   
+    if #available(iOS 15.0, *) {
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: titleColor]
+        navBarAppearance.titleTextAttributes = [.foregroundColor: titleColor]
+        navBarAppearance.backgroundColor = backgoundColor
+
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.compactAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+
+        navigationController?.navigationBar.prefersLargeTitles = preferredLargeTitle
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.tintColor = tintColor
+        navigationItem.title = title
+
+    } else {
+        // Fallback on earlier versions
+        navigationController?.navigationBar.barTintColor = backgoundColor
+        navigationController?.navigationBar.tintColor = tintColor
+        navigationController?.navigationBar.isTranslucent = false
+        navigationItem.title = title
+    }
+    }}
         
+>**THIS FUNCTION IS USED LIKE THIS:**
+
+    configureNavigationBar(titleColor: .systemPurple, backgoundColor: .white, tintColor: .systemYellow, title: "My Shopping List", preferredLargeTitle: true)
