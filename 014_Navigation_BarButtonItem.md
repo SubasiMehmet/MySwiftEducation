@@ -58,7 +58,7 @@
                 let appearance = UINavigationBarAppearance()
                 appearance.configureWithOpaqueBackground()
              // appearance.backgroundColor = .systemGray
-                navigationController?.navigationBar.standardAppearance = appearance;
+                navigationController?.navigationBar.standardAppearance = appearance
                 navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
             }
         
