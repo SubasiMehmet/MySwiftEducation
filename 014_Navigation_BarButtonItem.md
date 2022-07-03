@@ -32,3 +32,34 @@
 > Final setting
      
         navigationController?.isToolbarHidden = false
+        
+        
+### Title & Appearance
+
+ sdsfd
+
+> Some extra settings
+
+        self.title = "Strom Viewer"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+---  
+        title = "Picture \(selectedImageNumber) of \(totalNumberOfImages)"
+        navigationItem.largeTitleDisplayMode = .never
+        
+---
+
+        override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.hidesBarsOnTap = true
+        }
+        
+---
+        if #available(iOS 15, *) {
+                let appearance = UINavigationBarAppearance()
+                appearance.configureWithOpaqueBackground()
+             // appearance.backgroundColor = .systemGray
+                navigationController?.navigationBar.standardAppearance = appearance;
+                navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+            }
+        
