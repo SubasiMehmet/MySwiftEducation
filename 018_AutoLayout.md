@@ -1,8 +1,12 @@
 # AUTO-LAYOUT
 
- //MARK: - https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html#//apple_ref/doc/uid/TP40010853-CH27-SW1
-        //MARK: - https://stackoverflow.com/questions/54047396/how-to-use-visual-format-language-to-set-constraints-in-swift
-        
+![Screen Shot 2022-07-02 at 20 11 37](https://user-images.githubusercontent.com/50085545/177215651-e4ab5a70-6d42-49cc-b3e0-4150b5dbc85d.png)
+
+---
+https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html#//apple_ref/doc/uid/TP40010853-CH27-SW1
+---
+https://stackoverflow.com/questions/54047396/how-to-use-visual-format-language-to-set-constraints-in-swift
+---        
         // MARK: - Multiply view.widthAnchor with 0.2 and add (-10)
           label1.heightAnchor.constraint(greaterThanOrEqualTo: view.widthAnchor, multiplier: 0.2, constant: -10).isActive = true
         // This ruins the view.
