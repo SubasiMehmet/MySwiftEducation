@@ -32,7 +32,10 @@
 > It is **negative!!!** Because (equalTo: "A" and constant "B"( always says that the distance start from "A" and go rightward / downward by "B"
 >
             
-> These's priorities are not 1000 because of safeArea constraint. 999 means that try it but not compulsory. // Because of safeArea
+> These's priorities are not 1000 because of 
+
+
+Area constraint. 999 means that try it but not compulsory. // Because of safeArea
 
             let trailingConstraint = label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
             trailingConstraint.priority = UILayoutPriority(999)
@@ -41,7 +44,9 @@
             let leadingConstraint = label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0)
             leadingConstraint.priority = UILayoutPriority(999)
             leadingConstraint.isActive = true
-            
+  
+## Lean to Safe Area
+
 >To stay in safe area from right and left side. Lean to **safeArea**
 
             label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
