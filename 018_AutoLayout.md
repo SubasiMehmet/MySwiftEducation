@@ -32,10 +32,7 @@
 > It is **negative!!!** Because (equalTo: "A" and constant "B"( always says that the distance start from "A" and go rightward / downward by "B"
 >
             
-> These's priorities are not 1000 because of 
-
-
-Area constraint. 999 means that try it but not compulsory. // Because of safeArea
+> These's priorities are not 1000 because of safeArea constraint. 999 means that try it but not compulsory. // Because of safeArea
 
             let trailingConstraint = label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
             trailingConstraint.priority = UILayoutPriority(999)
@@ -56,14 +53,14 @@ Area constraint. 999 means that try it but not compulsory. // Because of safeAre
 > After for loop, by assigning label to last one, it leaves space between each other.
 >
 > But for the first one, there is no previous and it goes to "else".
->
+
             if let previous = previous {
                 label.topAnchor.constraint(equalTo: previous.bottomAnchor, constant: 40).isActive = true
                 
             }else{
 
 > To stay in safe area from top side.
->
+
                 label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
             }
             
@@ -83,11 +80,11 @@ Area constraint. 999 means that try it but not compulsory. // Because of safeAre
 ---        
 
 > Every UIView has a set of anchors that define its layouts rules. The most important ones are widthAnchor, heightAnchor, topAnchor, bottomAnchor, leftAnchor, rightAnchor, leadingAnchor, trailingAnchor, centerXAnchor, and centerYAnchor.
-
+>
 > Most of those should be self-explanatory, but it’s worth clarifying the difference between leftAnchor, rightAnchor, leadingAnchor, and trailingAnchor.
-       
+>      
 > For me, left and leading are the same, and right and trailing are the same too.
-    
+>   
 > MARK: leftAnchor = leadingAnchor  &  rightAnchor = trailingAnchor
 
 ---
