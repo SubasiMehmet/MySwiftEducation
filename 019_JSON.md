@@ -92,8 +92,7 @@
 > 3. Parsing & JSON Serialization
 
                         DispatchQueue.main.async {
-                            if let rates = jsonResponse["rates"] as? Dictionary <String, Double> { // as? [String, Double]
-                                //print(rates)
+                            if let rates = jsonResponse["rates"] as? Dictionary <String, Double> {
                                 if let cad = rates["CAD"] {
                                     self.CADLabel.text = "CAD: \(cad)"
                                 }
@@ -121,3 +120,6 @@
 > //ASYNC This process is async because these fetching processes need to be proceeded in background. Otherwise, it might lock the app.
 
 > Don't forget **task.resume!!**
+
+
+![Screen Shot 2022-07-07 at 20 11 39](https://user-images.githubusercontent.com/50085545/177831395-4976a6b2-1b0c-4661-9e87-b49778bb77d6.png)
