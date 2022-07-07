@@ -24,3 +24,32 @@
             showError()
          }
      }
+     
+---
+
+> **Attributes**
+
+**Petition.switf**
+
+    struct Petition: Codable{
+        var title: String
+        var body: String
+        var signatureCount: Int
+    }
+   
+> This variables' names must be same with JSON's variables's names, exactly.
+
+
+---
+
+> **Result**
+
+**Petitions.swift
+
+//MARK: - String of 'results' need to be same in json page
+
+    struct Petitions: Codable {
+        var results: [Petition]
+    }
+    
+> This cluster name must be same with variables' cluster's nam of JSON.
