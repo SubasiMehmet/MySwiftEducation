@@ -2,6 +2,8 @@
 
 > Creating JSON URL
 
+**ViewController**
+
     override func viewDidLoad() {
         let urlString: String
         
@@ -21,4 +23,4 @@
         }else{
             showError()
          }
-     **}**
+     }
