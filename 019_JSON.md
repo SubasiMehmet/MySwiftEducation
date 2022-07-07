@@ -62,7 +62,9 @@
 ## 2
 
 **1. Request & Session**
+
 **2. Response & Data**
+
 **3. Parsing & JSON Serialization**
         
 > 1. Request & Session
