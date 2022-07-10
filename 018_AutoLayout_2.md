@@ -2,6 +2,9 @@
 
 ## NSLayoutConstraint.activate
 
+
+**override func loadView() {**
+
     NSLayoutConstraint.activate([
             scoreLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
             scoreLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
