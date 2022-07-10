@@ -2,7 +2,7 @@
 
 ##Property Observer
 
-> In the below example, everytime when score changes, code will run inside of **{}**
+> In the below example, ***everytime*** when score changes, code will run inside of **{}**
 
     var score = 0 {
         didSet { //willSet
