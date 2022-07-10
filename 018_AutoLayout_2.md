@@ -69,18 +69,24 @@
     
             
 ## override func loadView() 
-  
+
+> view = UIView() makes view equal to all view. 
+
         override func loadView() {
         
         view = UIView()
         view.backgroundColor = .white
-        
+
+---
+
         scoreLabel = UILabel()
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false  // To make arrangement in layout. IMPORTANT!!!
         scoreLabel.textAlignment = .right
         scoreLabel.text = "Score: 0"
         view.addSubview(scoreLabel)
         
+---
+
         let buttonsView = UIView()
         buttonsView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(buttonsView)
