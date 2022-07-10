@@ -74,3 +74,9 @@
 
 > It shuffles the array and returns new array.
         let newArray = array.shuffled()
+        
+## removeAll & removeAll(keepingCapasity: Bool) 
+
+> removeAll() removes all items in an array. 
+
+> removeAll(keepingCapasity: Bool) removes all items in an array while let decide to hold memory for array. Not a really big difference.
