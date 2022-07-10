@@ -50,3 +50,9 @@
 ## insert(String:, at:)
 
 > It add an item to where you want.
+
+## components(separatedBy: \n)
+
+    var splitAnswers = answersLabel.text?.components(separatedBy: "\n")
+    
+> It split the text by "\n" character and assings to a array.
