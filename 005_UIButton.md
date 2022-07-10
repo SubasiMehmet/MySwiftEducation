@@ -56,7 +56,7 @@
 
 > **sender**
 
-   @objc func letterTapped(_ sender: UIButton) {
+    @objc func letterTapped(_ sender: UIButton) {
         guard let buttonTitle = sender.titleLabel?.text else {return}
         sender.isHidden = true
     }
