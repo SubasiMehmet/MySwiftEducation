@@ -43,6 +43,10 @@
 
 > It add an item to end of the list
 
+## appending()
+
+> It add an item to end of the list but doesn't change the list. It returns a new list.
+
 ## insert(String:, at:)
 
 > It add an item to where you want.
