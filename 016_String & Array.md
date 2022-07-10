@@ -1,4 +1,4 @@
-# STRING FEATURES
+# STRING & ARRAY FEATURES
 
 ---
 ## UITextChecker()
@@ -56,7 +56,6 @@
 > It split the text by a char (**for example: "\n"**) character and assings to a array.
 
     var splitAnswers = answersLabel.text?.components(separatedBy: "\n")
-    
 
 ## joined(separator: )
 
