@@ -66,6 +66,22 @@
     let constraintTrailing = containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0.0)
     constraintTrailing.priority = UILayoutPriority(rawValue: 750.0)
     constraintTrailing.isActive = true
+    
             
+## override func loadView() 
   
+        override func loadView() {
+        
+        view = UIView()
+        view.backgroundColor = .white
+        
+        scoreLabel = UILabel()
+        scoreLabel.translatesAutoresizingMaskIntoConstraints = false  // To make arrangement in layout. IMPORTANT!!!
+        scoreLabel.textAlignment = .right
+        scoreLabel.text = "Score: 0"
+        view.addSubview(scoreLabel)
+        
+        let buttonsView = UIView()
+        buttonsView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(buttonsView)
   
