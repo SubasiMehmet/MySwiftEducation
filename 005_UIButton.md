@@ -53,6 +53,15 @@
     }
 
 ---
+
+> **sender**
+
+   @objc func letterTapped(_ sender: UIButton) {
+        guard let buttonTitle = sender.titleLabel?.text else {return}
+        sender.isHidden = true
+    }
+  
+  
   
 ## Some Animation to Press Buttons
 > MARK: For instance, It can be used like **sender.pulsate**
