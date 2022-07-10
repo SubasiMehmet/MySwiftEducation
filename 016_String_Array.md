@@ -53,6 +53,13 @@
 
 ## components(separatedBy: \n)
 
+> It split the text by a char (**for example: "\n"**) character and assings to a array.
+
     var splitAnswers = answersLabel.text?.components(separatedBy: "\n")
     
-> It split the text by "\n" character and assings to a array.
+
+## joined(separator: )
+
+> It merges all array by putting a char (**for example: "\n"**) and makes a text (String)
+
+    answersLabel.text = splitAnswers?.joined(separator: "\n")
