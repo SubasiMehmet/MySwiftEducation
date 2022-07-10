@@ -63,3 +63,14 @@
 > It merges all array by putting a char (**for example: "\n"**) and makes a text (String)
 
     answersLabel.text = splitAnswers?.joined(separator: "\n")
+    
+## shuffle()
+
+> It shuffles the array and creates new array.
+        
+        array.shuffle()
+
+## shuffled()
+
+> It shuffles the array and returns new array.
+        let newArray = array.shuffled()
