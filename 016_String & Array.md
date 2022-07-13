@@ -51,11 +51,17 @@
 
 > It add an item to where you want.
 
-## components(separatedBy: \n)
+## components(separatedBy: "\n")
 
-> It split the text by a char (**for example: "\n"**) character and assings to a array.
+> It splits the text by a char (**for example: "\n"**) character and assings to a array.
 
     var splitAnswers = answersLabel.text?.components(separatedBy: "\n")
+    
+## split(separated: \n)
+
+> It splits the text by a char (**for example: "\n"**) character and assings to a array.
+
+    var splitAnswers = answersLabel.text?.split(separated: "\n")
 
 ## joined(separator: )
 
