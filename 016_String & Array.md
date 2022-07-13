@@ -61,7 +61,7 @@
 
 > It splits the text by a char (**for example: "\n"**) character and assings to a array.
 
-    var splitAnswers = answersLabel.text?.split(separated: "\n")
+    var splitAnswers = answersLabel.text?.split(separator: "\n")
 
 ## joined(separator: )
 
