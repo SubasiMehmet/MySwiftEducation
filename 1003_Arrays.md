@@ -18,6 +18,7 @@
     arr.count -> 6
     arr.append(6) -> [0,1,2,3,4,5,6]
     arr += [7] -> [0,1,2,3,4,5,6,7]
+    arr.firstIndex(of: 3)  -> 3 -> Gives directly Int
  
  ### Insert & Remove
  
@@ -58,6 +59,24 @@
 
     var arrayStr = ["Hi", "Hello", "Holo"]
     var filteredStrArr = arrayStr.filter{$0.contains("lo")}
-    filteredStrArr -> ["Hello", "Holo"]
+    filteredStrArr -> ["Hello", "Holo"]
     
-
+### Map()
+
+> Take all value, perform some action and return a array with new values
+    
+    var array = [1,2,3]
+    var squaredArray = array.map{Int(pow(Double($0), 2))}
+    squaredArray -> [1,4,9]
+
+### ForEach()
+
+> There is no difference than a refular for loop
+    
+    var arr = [1,2,3]
+    var arr2 : [Int] = [0]
+    arr.forEach{arr2.append($0)}
+    arr2 -> [0,1,2,3]
+
+    
+
