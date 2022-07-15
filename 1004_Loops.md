@@ -4,6 +4,8 @@
 
 ### label: for i in range/array/String where (condition)
 
+> Note: if conditions also can be labeled.
+
     let languages = ["Türkçe", "İngilizce", "Almanca", "Fransızca"]
 
     languageFor: for language : String in languages where (language != "İngilizce") {
@@ -89,7 +91,7 @@
         i   // -> It doesn't write these. Because when j == 4, it will break the 'birincifor.'
     }
 
-> **Continue** is used for loops. When the code encounter with **Continue**, it doesn't rest of the code inside of the loop and immediatly skip that index to next one. Loop continue from next index after the code encounters with **continue**
+> **Continue** is used for loops. When the code encounter with **continue**, it doesn't rest of the code inside of the loop and immediatly skip that index to next one. Loop continue from next index after the code encounters with **continue**
 
 > **Continue** can be controllable with labels like 'break'
 
