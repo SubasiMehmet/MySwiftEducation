@@ -241,14 +241,21 @@
 
 ## Index Range
 
+**String[range]**
+
 > **Range = lowerBound ... upperBound** OR **Range = lowerBound ..< upperBound** 
 
     let myString = "100dayswithswfit.com"
 
     let firstIndex = myString.startIndex
     let lastIndex = myString.index(myString.endIndex, offsetBy: -4)
-    let range = firstIndex ..< lastIndex    // ..> OR ...
+    let range = firstIndex ..< lastIndex    // ..< OR ...
     let range2 = firstIndex ... lastIndex
     mySubString[range]
     mySubString[range2]
 
+### Find Range of subString
+
+    if let findSubstring = myString.range(of: "com") {
+       //print(myString[findSubstring])
+    }
