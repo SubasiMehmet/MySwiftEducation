@@ -169,20 +169,25 @@
     //let endLetter = str[str.endIndex]     //It doesn't work directly. It declares after one index from the final letter. XXX
 
 
-### str[index] 
+## str[index] 
 
 > I think, the following two are useless.
 
     str[str.index(after: str.startIndex)]   //"1" index after startIndex  -> Second Letter
     str[str.index(before: str.endIndex)]    //"1" index before endIndex   -> First Letter
 
+
+### offset
+
 > To select a char, **offset** is a better option.
->
+
     let str = "Hello"
     str[str.index(str.startIndex, offsetBy: 1)]    -> 'e'       // From the beginning, it starts with 0  !!!
     str[str.index(str.endIndex, offsetBy: -4)]     -> 'e'        // From the end, it starts with -1  !!!
 
 > **Important Note: From the beginning, it starts with 0. From the end, it starts with -1.**
+
+### limitedBy
 
 
 > Index with optional -> To avoid error. 
