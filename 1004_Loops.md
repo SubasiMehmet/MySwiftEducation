@@ -105,16 +105,8 @@
         i   // -> It doesn't return anything. Because every time when j == 4, it will skip this line and go to beginning of 'birincifor'
     }
 
-   
-A footnote can also have multiple lines[^2].  
 
-You can also use words, to fit your writing style more closely[^note].
+Hello
 
-[^1]: My reference.
-[^2]: Every new line should be prefixed with 2 spaces.  
-  This allows you to have a footnote with multiple lines.
-[^note]:
-    Named footnotes will still render with numbers instead of the text but allow easier identification and linking.  
-    This footnote also has been made with a different syntax using 4 spaces for new lines.
-    
+ (|) Hello
     
