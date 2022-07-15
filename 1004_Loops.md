@@ -41,14 +41,14 @@
     
 # While & Repeat While
 
-**while (condition){
-  // body of loop
+**while (condition){  
+  // body of loop  
 }
 **
 
-**repeat {
-   // body of loop
- } while (condition)
+**repeat {  
+   // body of loop  
+ } while (condition)  
 **
  
 
