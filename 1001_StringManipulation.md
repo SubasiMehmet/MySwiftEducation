@@ -143,6 +143,17 @@
 ### ASCII Check
 
     number.asciiValue
+    
+    
+### Reverse String
+
+    var str5 = "Hello"
+    for char in str5.reversed() {
+       char.  -> orderly: o, l, l, e, H
+    }
+
+    var reversedWord = String(str5.reversed())
+    reversedWord        -> "olleH"
 
 ---
 ---
@@ -281,6 +292,18 @@
 
     var stars = "****"
     stars.insert("X", at: stars.index(stars.startIndex, offsetBy: 2))  
+ 
+ 
+### Insert / Append / Appending
+
+> **Insert:** inserts a char inside of the defined range.
+> **Append:** inserts a text/char to end of the string
+> **Appending:** inserts a text/chart end of the string but doesn't change the orijinal one. Returns a new String.
+
+    var naturalString = "BC"
+    naturalString.append(contentsOf: "D")
+    naturalString.insert("A", at: naturalString.startIndex)
+    var naturalString2 = naturalString.appending("T")
 
 
 ### Replace Subrange
@@ -293,14 +316,14 @@
     if let XYZrange = stars.range(of: "XYZ") {
         stars.replaceSubrange(XYZrange, with: "ABCDEF")
     }
+ 
+### RemoveSubrange
+
+    let lowerBound = naturalString.index(naturalString.startIndex, offsetBy: 1)
+    let upperBound = naturalString.index(naturalString.endIndex, offsetBy: -2)
+    let range3 = lowerBound ..< upperBound
+    naturalString.removeSubrange(range3)
     
-### Insert / Append / Appending
+     
+    
 
-> **Insert:** inserts a char inside of the defined range.
-> **Append:** inserts a text/char to end of the string
-> **Appending:** inserts a text/chart end of the string but doesn't change the orijinal one. Returns a new String.
-
-    var naturalString = "BC"
-    naturalString.append(contentsOf: "D")
-    naturalString.insert("A", at: naturalString.startIndex)
-    var naturalString2 = naturalString.appending("T")
