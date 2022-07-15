@@ -64,7 +64,7 @@
     
 ### Spliting into SubString Array -> Same
 
-> It splits the text by a char (**for example: "\n"** or **""** -> to take char by char) character and assings to a array.
+> It splits the text (**for example: "\n"** or **""** -> to take char by char) and assings to a array.
 
     var splitAnswers = answersLabel.text?.components(separatedBy: "\n")
 
