@@ -42,12 +42,12 @@
 # While & Repeat While
 
 **while (condition){    
-  // body    
+   // body    
 }**  
 
 
 **repeat {   
-   // body   
+    // body   
  } while (condition)**  
 
  
