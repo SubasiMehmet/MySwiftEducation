@@ -44,12 +44,12 @@
 # While & Repeat While
 
 **while (condition){    
-// body  
+&nbsp;&nbsp; // body  
 }**  
 
 
 **repeat {   
-// body   
+&nbsp;&nbsp; // body   
 } while (condition)**  
 
  
@@ -105,10 +105,3 @@
         i   // -> It doesn't return anything. Because every time when j == 4, it will skip this line and go to beginning of 'birincifor'
     }
 
-
-Hello
-
-&nbsp Hello
-
-&nbsp; Hello
-    
