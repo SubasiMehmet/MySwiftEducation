@@ -239,9 +239,10 @@
 
     let removedLetter = str.remove(at: str.index(str.startIndex, offsetBy: 2)) 
 
+---
+---
 
-
-## Index Range
+## String Range
 
 **String[range]**
 
@@ -261,3 +262,14 @@
     if let findSubstring = myString.range(of: "com") {
        //print(myString[findSubstring])
     }
+
+
+### Use All After One Index
+
+    let firstIndex2 = myString.index(myString.startIndex, offsetBy: 3)
+    let subString = myString[firstIndex2...]
+    let subString2 = myString[...firstIndex2]
+    let subString3 = myString[..<firstIndex2]
+
+    let takePrefix = myString.prefix(2)
+    let takeSuffix = myString.suffix(2)
