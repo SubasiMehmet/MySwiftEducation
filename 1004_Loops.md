@@ -41,15 +41,15 @@
     
 # While & Repeat While
 
-**while (condition){  
-  // body  
-}
-**
+**while (condition){  **
+  // body  **
+}**
 
-**repeat {  
-   // body 
- } while (condition)  
-**
+
+**repeat {  **
+   // body **
+ } while (condition)  **
+
  
 
     var i = 1, n = 5
