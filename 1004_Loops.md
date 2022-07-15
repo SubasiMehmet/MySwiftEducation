@@ -44,17 +44,13 @@
 # While & Repeat While
 
 **while (condition){    
-
-  **// body**    
-  
-**}**  
+// body  
+}**  
 
 
-**repeat {**   
-
-  **// body**   
-
-**} while (condition)**  
+**repeat {   
+// body   
+} while (condition)**  
 
  
 
