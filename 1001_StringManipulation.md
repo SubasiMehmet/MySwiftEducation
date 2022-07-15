@@ -147,9 +147,11 @@
 ---
 ---
 
-# String Index
+## String Index
 
 ### Index
+
+**str(index)**
 
 > To select a special character, **index** needs to be used. Index doesn't return a Int. **Index is index!!!**
 
