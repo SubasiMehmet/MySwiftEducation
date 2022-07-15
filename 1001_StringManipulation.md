@@ -47,10 +47,7 @@
     line.hasSuffix("data") //True
     line.hasPrefix("some") // False
     line.contains("test") //True
-
-### Precedence test  // Comparing Order -> Boolean
-
-    if "aaa" < "bbb" { True }
+    
     
 ### Uppercase - Lowercase
 
@@ -81,3 +78,71 @@
     stringStr = String(arr[1])    //arr[] is Substring Array from former example
     substringStr = arr[1]
     substringStr = Substring(stringStr)
+    
+### Clearing White Spaces & Extra Lines
+
+     str.trimmingCharacters(in: .whitespacesAndNewlines)
+     
+### Processing char by char
+
+    for character in swift {
+        //print(character)
+    }
+    
+### Shuffle String
+
+>Shuffle() doesn't return anything. It change the String
+>Shuffled returns a shuffled string and it need to be assigned to another one to hold that shuffled String.
+
+    var shuffledSwift = swift.shuffled()
+    shuffledSwift.shuffle()
+
+    for i in swift.shuffled(){
+      // Do something with "i"
+    }
+
+### Counting
+
+> spain.utf16.count is the best practice.
+
+    let spain = "España"
+    spain.count                 // 6
+    spain.unicodeScalars.count  // 6
+    spain.utf16.count           // 6 is the best practice
+    spain.utf8.count            // 7 because of the 'ñ'
+    
+### Character Control / Check
+
+    let number : Character = "5"
+    number.isNumber
+    number.isLetter //To find letters, the best practice. It contains Ş,Ğ etc.
+    number.isASCII
+    number.isPunctuation
+    number.isSymbol
+    number.isNewline
+    number.isWhitespace
+    number.isMathSymbol
+    number.isUppercase
+    //number.is...
+    
+### English Alphabet Control
+
+> char.isLetter contains all letters like "ñ, ş, ğ". But for the English alphabet, below example can be used.
+
+    let char = "Ş"
+    if (char >= "a" && char <= "z") || (char >= "A" && char <= "Z") {   // Returns false
+        char 
+    }
+
+### Precedence test  // Comparing Order -> Boolean
+
+> 'a' has lower ASCII value than 'b'. 
+
+    if "aaa" < "bbb" { True }
+
+### ASCII Check
+
+    number.asciiValue
+
+
+# String Index
