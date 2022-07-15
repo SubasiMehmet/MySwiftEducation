@@ -41,8 +41,8 @@
     
 # While & Repeat While
 
-**while (condition){  **  
-  // body  **  
+**while (condition){    
+  // body    
 }**  
 
 
