@@ -171,7 +171,7 @@
 
 ## str[index] 
 
-> I think, the following two are useless.
+> I think, the following two are not a perfect choise beacuse there is offset option.
 
     str[str.index(after: str.startIndex)]   //"1" index after startIndex  -> Second Letter
     str[str.index(before: str.endIndex)]    //"1" index before endIndex   -> First Letter
