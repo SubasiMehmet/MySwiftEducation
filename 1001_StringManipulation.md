@@ -196,3 +196,43 @@
 
     let someIndex = str.index(str.startIndex, offsetBy: 120, limitedBy: str.endIndex)
 
+### Process every character one by one with index
+    
+    for index in str.indices {
+       //print(str[index])
+    }
+
+    for letter in str {     // without index
+      //print(letter)
+    }
+
+
+### Finding A Character in String
+
+> Finding first index -> If there is no letter, it would be nil.
+
+str.firstIndex(of: "W")
+str.lastIndex(of: "W")
+swift.first
+swift.last
+
+### Drop First() & Last()
+
+> Drop() doesn't drop in original text. It returns dropped string and needs to bes assigned to hold.
+
+
+let strDropFirst = str.dropFirst()  //Assigning
+let strDropFromFirst = str.dropFirst(2) //Assigning
+let strDropLast = str.dropLast()
+let strDropFromLast = str.dropLast(2)
+
+
+### Remove
+
+
+
+
+
+
+
+
