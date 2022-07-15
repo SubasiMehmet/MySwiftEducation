@@ -169,7 +169,7 @@
     //let endLetter = str[str.endIndex]     //It doesn't work directly. It declares after one index from the final letter. XXX
 
 
-## str[index] 
+## str(index)
 
 > I think, the following two are not a perfect choise beacuse there is offset option.
 
@@ -207,32 +207,48 @@
     }
 
 
-### Finding A Character in String
-
-> Finding first index -> If there is no letter, it would be nil.
-
-str.firstIndex(of: "W")
-str.lastIndex(of: "W")
-swift.first
-swift.last
 
 ### Drop First() & Last()
 
 > Drop() doesn't drop in original text. It returns dropped string and needs to bes assigned to hold.
 
 
-let strDropFirst = str.dropFirst()  //Assigning
-let strDropFromFirst = str.dropFirst(2) //Assigning
-let strDropLast = str.dropLast()
-let strDropFromLast = str.dropLast(2)
+    let strDropFirst = str.dropFirst()  //Assigning
+    let strDropFromFirst = str.dropFirst(2) //Assigning
+    let strDropLast = str.dropLast()
+    let strDropFromLast = str.dropLast(2)
+    
+
+
+### Finding A Character in String
+
+> Finding first index -> If there is no letter, it would be nil.
+
+    str.firstIndex(of: "W")
+    str.lastIndex(of: "W")
+    swift.first
+    swift.last
+
 
 
 ### Remove
 
+> // It removes the char, changes the original String and return removed char
+
+    let removedLetter = str.remove(at: str.index(str.startIndex, offsetBy: 2)) 
 
 
 
+## Index Range
 
+> **Range = lowerBound ... upperBound** OR **Range = lowerBound ..< upperBound** 
 
+    let myString = "100dayswithswfit.com"
 
+    let firstIndex = myString.startIndex
+    let lastIndex = myString.index(myString.endIndex, offsetBy: -4)
+    let range = firstIndex ..< lastIndex    // ..> OR ...
+    let range2 = firstIndex ... lastIndex
+    mySubString[range]
+    mySubString[range2]
 
