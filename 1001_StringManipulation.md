@@ -144,5 +144,49 @@
 
     number.asciiValue
 
+---
+---
 
 # String Index
+
+### Index
+
+> To select a special character, **index** needs to be used. Index doesn't return a Int. **Index is index!!!**
+
+> To select a special character, str[index] needs to be used. str[1] cannot be used. **Because index is not a Integer!!!**
+
+### startIndex & endIndex
+
+> startIndex declares first character like [0] but end index doesn't declares last character. It declares one character after the last character.
+
+
+** startIndex & endIndex are used frequently to select a char.
+
+    let startIndex = str.startIndex     //It declares index
+    let endIndex = str.endIndex         //It declares index
+    
+    let firstLetter = str[str.startIndex]
+    //let endLetter = str[str.endIndex]     //It doesn't work directly. It declares after one index from the final letter. XXX
+
+
+### str[index] 
+
+> I think, the following two are useless.
+
+    str[str.index(after: str.startIndex)]   //"1" index after startIndex  -> Second Letter
+    str[str.index(before: str.endIndex)]    //"1" index before endIndex   -> First Letter
+
+> To select a char, **offset** is a better option.
+    let str = "Hello"
+    str[str.index(str.startIndex, offsetBy: 1)]    -> 'e'       // From the beginning, it starts with 0  !!!
+    str[str.index(str.endIndex, offsetBy: -4)]     -> 'e'        // From the end, it starts with -1  !!!
+
+> **Important Note: From the beginning, it starts with 0. From the end, it starts with -1.**
+
+
+> Index with optional -> To avoid error. 
+ 
+> If we go too far with offset, it gives an error. But with limit, if it is go too far, index will be nil.
+
+    let someIndex = str.index(str.startIndex, offsetBy: 120, limitedBy: str.endIndex)
+
