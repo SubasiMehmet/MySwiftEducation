@@ -177,6 +177,7 @@
     str[str.index(before: str.endIndex)]    //"1" index before endIndex   -> First Letter
 
 > To select a char, **offset** is a better option.
+>
     let str = "Hello"
     str[str.index(str.startIndex, offsetBy: 1)]    -> 'e'       // From the beginning, it starts with 0  !!!
     str[str.index(str.endIndex, offsetBy: -4)]     -> 'e'        // From the end, it starts with -1  !!!
