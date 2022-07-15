@@ -273,3 +273,34 @@
 
     let takePrefix = myString.prefix(2)
     let takeSuffix = myString.suffix(2)
+   
+   
+### INSERT
+
+> Only character can be inserted. Not subString or String.
+
+    var stars = "****"
+    stars.insert("X", at: stars.index(stars.startIndex, offsetBy: 2))  
+
+
+### Replace Subrange
+
+> Replace area is defined as range and replaced with a text/char regardless of text's length. 
+
+> If new text longer than previous one, it pushes the other characters to left.
+
+    stars = "**XYZ**XYZ"
+    if let XYZrange = stars.range(of: "XYZ") {
+        stars.replaceSubrange(XYZrange, with: "ABCDEF")
+    }
+    
+### Insert / Append / Appending
+
+> **Insert:** inserts a char inside of the defined range.
+> **Append:** inserts a text/char to end of the string
+> **Appending:** inserts a text/chart end of the string but doesn't change the orijinal one. Returns a new String.
+
+    var naturalString = "BC"
+    naturalString.append(contentsOf: "D")
+    naturalString.insert("A", at: naturalString.startIndex)
+    var naturalString2 = naturalString.appending("T")
