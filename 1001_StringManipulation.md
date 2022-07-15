@@ -19,7 +19,7 @@
     But this is next line
     """
 
-    let nextLine = "Hello\nHow are you? \t I hope everyting is OK."
+    let multiLine = "Hello\nHow are you? \t I hope everyting is OK."
 
 ### Character
     
