@@ -4,6 +4,8 @@
 
 > You can try these three ones by starting with **weak** and then **unowned** and finally **strong.**
 
+> Because **strong** might cause memory problems.
+
 ![Capture lists in Swift: what’s the difference between weak, strong, and unowned references? – Hacking with Swift-01](https://user-images.githubusercontent.com/50085545/175830413-32b62b22-43de-441e-b4fa-bd16d686ee52.jpg)
 ![Capture lists in Swift: what’s the difference between weak, strong, and unowned references? – Hacking with Swift-02](https://user-images.githubusercontent.com/50085545/175830414-faa0f849-12eb-4755-beb6-bb52c4f08adb.jpg)
 ![Capture lists in Swift: what’s the difference between weak, strong, and unowned references? – Hacking with Swift-03](https://user-images.githubusercontent.com/50085545/175830416-a038e25b-e9c7-4ec5-b0d8-0c7dac91c151.jpg)
