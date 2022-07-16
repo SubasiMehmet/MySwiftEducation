@@ -229,7 +229,7 @@
 
 ### Drop First() & Last()
 
-> Drop() doesn't drop in original text. It returns dropped string and needs to bes assigned to hold.
+> Drop() doesn't drop in original text. It returns dropped string and needs to be assigned to hold.
 
 
     let strDropFirst = str.dropFirst()  //Assigning
