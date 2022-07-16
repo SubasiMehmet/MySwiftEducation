@@ -168,7 +168,7 @@
 
 ### Index
 
-**str(index)**
+**str[index]**
 
 > To select a special character, **index** needs to be used. Index doesn't return a Int. **Index is index!!!**
 
@@ -188,7 +188,7 @@
     //let endLetter = str[str.endIndex]     //It doesn't work directly. It declares after one index from the final letter. XXX
 
 
-## str(index)
+## str[index]
 
 > I think, the following two are not a perfect choise beacuse there is offset option.
 
