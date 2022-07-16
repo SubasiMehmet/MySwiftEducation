@@ -322,6 +322,11 @@
     if let XYZrange = stars.range(of: "XYZ") {
         stars.replaceSubrange(XYZrange, with: "ABCDEF")
     }
+    
+### ReplacingOccurences()
+
+    let str = "Swift 4.0 is the best version of Swift to learn, so if you're starting fresh you should definitely learn Swift 4.0."
+    let replaced = str.replacingOccurrences(of: "4.0", with: "5.0")
  
 ### RemoveSubrange
 
