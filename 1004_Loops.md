@@ -40,6 +40,14 @@
         i // -> 0,3,6,9 // 9 is included
     }
     
+### Enumerated
+
+        for (index, line) in lines.enumerated(){    //Follow the indexes
+           if lines[index] == line {
+           //true
+           }
+        }  
+    
     
 # While & Repeat While
 
