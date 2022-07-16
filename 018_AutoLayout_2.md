@@ -39,7 +39,8 @@
                                     ]) 
                                     
 > view.layoutMarginsGuide -> SafeAreaLayoutGuide
-  layoutMarginsGuide and safeAreaLayoutGuide are NOT exacly the same thing. Not quite: layoutMarginsGuide is inside the safeAreaLayoutGuide, so it will be slightly smaller.
+
+> layoutMarginsGuide and safeAreaLayoutGuide are NOT exacly the same thing. Not quite: layoutMarginsGuide is inside the safeAreaLayoutGuide, so it will be slightly smaller.
   
  ---
  
