@@ -57,12 +57,12 @@
     let capitalizer = mixedCase.capitalized
 
 
-### Spliting into SubString Array
+### Spliting into SubString Array -> Substring Array
 
     var greeting = "Hello, Merhaba, Hallo, Bonjour, Hola"
     var arr = greeting.split(separator: ",")
     
-### Spliting into SubString Array -> Same
+### Spliting into String Array -> String Array
 
 > It splits the text (**for example: "\n"** or **""** -> to take char by char) and assings to a array.
 
