@@ -42,11 +42,11 @@
     
 ### Enumerated
 
-        for (index, line) in lines.enumerated(){    //Follow the indexes
-           if lines[index] == line {
-           //true
-           }
-        }  
+    let results = ["Paul", "Sophie", "Lottie", "Andrew", "John"]
+
+    for (place, result) in results.enumerated() {
+        print("\(place + 1). \(result)")
+    } 
     
     
 # While & Repeat While
