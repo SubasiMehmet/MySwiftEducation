@@ -29,7 +29,7 @@
                 pictures.append(item)
             }
             // MARK: Sort the array
-            pictures.sort()
+            pictures.sort() -> String Array
         }
         
     }
