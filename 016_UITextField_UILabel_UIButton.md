@@ -6,6 +6,8 @@
     var myTextField = UITextField()
     
       override func loadView() {
+        view = UIView()
+      
         myTextField.translatesAutoresizingMaskIntoConstraints = false
         myTextField.textAlignment = .center
         myTextField.font = UIFont.systemFont(ofSize: 30)
@@ -15,7 +17,7 @@
         
         myTextField.addTarget(self, action: #selector(textViewChanged), for: .editingChanged)  -> It observes changes in the text and before any change, it call "textViewChanged" function. IMPORTANT!!!
 
-        view.addSubview(submitTextField)
+        view.addSubview(myTextField)
       }
       
       
@@ -44,4 +46,18 @@
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         giveLetter()
         return true
+    }
+    
+    
+    
+# UILabel
+  
+    override func loadView() {
+        view = UIView()  
+        
+        myLabel.translatesAutoresizingMaskIntoConstraints = false
+        myLabel.textAlignment = .center
+        myLabel.font = UIFont.systemFont(ofSize: 30)
+        myLabel.numberOfLines = 0   ->It allows to label wrap as much as possible. (0 = Infinite, 1 = One, 10 = Ten...)
+        view.addSubview(myLabel)
     }
