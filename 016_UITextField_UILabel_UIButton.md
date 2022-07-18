@@ -61,3 +61,5 @@
         myLabel.numberOfLines = 0   ->It allows to label wrap as much as possible. (0 = Infinite, 1 = One, 10 = Ten...)
         view.addSubview(myLabel)
     }
+    
+    
