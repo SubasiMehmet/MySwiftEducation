@@ -91,7 +91,7 @@ Note: #selector always accepts @obj func
 3. User Interface operations need to be run in Main Thread. Otherwise, it does not work.
 4. To make operation in MainThread with tableView which is running in a function not inside of MainThread: 
 
-    tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
+        tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
 
 5. Using threads is a professional approach but while doing it, needed to be careful.
 
