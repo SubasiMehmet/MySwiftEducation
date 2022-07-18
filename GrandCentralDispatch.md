@@ -20,13 +20,29 @@
 > The most important think about it: If you send the process to other thread, rest of the code will not wait for it and continue. We may not want to skip the process sometimes. (Most of times)
 
 
-**To send to another thread with spesific qos (Quality of service)
+**To send to another thread with spesific qos (Quality of service) (1)**
 
     DispatchQueue.global(qos: .background).async { [weak self] in   }
     DispatchQueue.global(qos: .userInitiated).async { [weak self] in   }
     DispatchQueue.global(qos: .utility).async { [weak self] in   }
     DispatchQueue.global(qos: .userInteractive).async { [weak self] in   }
     
-**Take back to main thread
+    
+**To send to another thread with default qos (2)** 
 
-                    DispatchQueue.global(qos: .userInitiated).async {   }
+    performSelector(inBackground: #selector(fetchJSON), with: nil)
+
+Note: #selector always accepts @obj func
+
+---
+
+**Take back to main thread (1)**
+
+    DispatchQueue.main.async { [weak self] in   }
+ 
+**Take back to main thread (2)**
+ 
+    performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
+ 
+ 
+Note: #selector always accepts @obj func 
