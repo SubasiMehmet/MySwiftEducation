@@ -13,7 +13,7 @@
         myTextField.layer.cornerRadius = 10
         myTextField.becomeFirstResponder()
         
-        myTextField.addTarget(self, action: #selector(textViewChanged), for: .editingChanged)  -> Important One
+        myTextField.addTarget(self, action: #selector(textViewChanged), for: .editingChanged)  -> It observes changes in the text and before any change, it call "textViewChanged" function. IMPORTANT!!!
 
         view.addSubview(submitTextField)
       }
