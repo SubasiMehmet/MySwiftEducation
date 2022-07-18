@@ -32,7 +32,7 @@
 
     performSelector(inBackground: #selector(fetchJSON), with: nil)
 
-Note: #selector always accepts @obj func
+Note: default qos's priority of perform selector is between "userInitiated" and ".utility"
 
 ---
 
@@ -46,3 +46,55 @@ Note: #selector always accepts @obj func
  
  
 Note: #selector always accepts @obj func 
+
+
+---
+
+> Main challange about using other threads rather than main thread is that User Interface must be updated in main thread. If a function contains table view updating operation, it must be in main thread. Otherwise, program does not work.
+
+**Here is an example**
+
+
+    performSelector(inBackground: #selector(fetchJSON), with: nil)
+      
+    @objc func fetchJSON() {
+        
+       let urlString: String
+            
+        if navigationController?.tabBarItem.tag == 0 {
+           urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+        }else{
+           urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
+        }
+        
+        if let url = URL(string: urlString) {
+           if let data = try? Data(contentsOf: url){
+               parse(json: data)
+               holdSpare()
+                return
+            }
+
+            performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
+         }
+    }
+
+**Showing error is taken to MainThread in the function which is running on another thread.
+
+
+---
+
+> **NOTES:**
+
+
+1. Using another thread is the best practice for JSON processes.
+2. Usin another thread is the best practice for filter operations in wide lists.
+3. User Interface operations need to be run in Main Thread. Otherwise, it does not work.
+4. To make operation in MainThread with tableView which is running in a function not inside of MainThread: 
+
+    tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
+
+5. Using threads is a professional approach but while doing it, needed to be careful.
+
+
+
+
