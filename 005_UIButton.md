@@ -60,7 +60,26 @@
         guard let buttonTitle = sender.titleLabel?.text else {return}
         sender.isHidden = true
     }
+    
+    
+## Auto Layout
+
+     var myButton = UIButton()
   
+     override func loadView()
+          view = UIView()
+          
+        myButton = UIButton(type: .system)  // -> Important. Otherwise, system does not recognize the button.
+        let buttonSize = UIScreen.main.bounds.size.height / 12
+        myButton.translatesAutoresizingMaskIntoConstraints = false
+        myButton.setTitle("OK", for: .normal)
+        myButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        myButton.backgroundColor = .white
+        myButton.tintColor = .systemBlue
+        myButton.layer.cornerRadius = 20
+        myButton.layer.borderWidth = 1
+        myButton.layer.borderColor = UIColor.systemGray.cgColor
+        myButton.addTarget(self, action: #selector(giveLetter), for: .touchUpInside)
   
   
 ## Some Animation to Press Buttons
