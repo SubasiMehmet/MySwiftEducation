@@ -5,6 +5,8 @@
 
 **override func loadView() {**
 
+**UIScreen.main.bounds.size.height** might be used to reach size of screen.
+
     NSLayoutConstraint.activate([
             scoreLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
             scoreLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
