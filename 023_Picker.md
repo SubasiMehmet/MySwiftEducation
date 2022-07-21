@@ -21,3 +21,5 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         SaveButton.isEnabled = true
         self.dismiss(animated: true, completion: nil)  //picker'ı kapatmak için
     }
+
+
