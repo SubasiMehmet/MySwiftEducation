@@ -1,7 +1,6 @@
 # Collection View
 
-
-**ViewController**
+## View Controller
 
     class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
    
@@ -121,3 +120,39 @@
     
 >collectionView.reloadData()   
     
+
+
+## UICollectionViewCell
+
+
+    class PersonCell: UICollectionViewCell {
+    
+        static let identifier = "CustomCollectionViewCell"
+    
+        @IBOutlet var imageView: UIImageView!
+        @IBOutlet var name: UILabel!
+
+    }
+    
+
+## Item Class
+
+**layoutSubview
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.addSubview(myLabel)
+        contentView.addSubview(myImageView)
+        contentView.backgroundColor = .systemRed
+        contentView.clipsToBounds = true
+        
+        
+        myLabel.frame = CGRect(x: 5, y: contentView.frame.size.height - 50, width: contentView.frame.size.width - 10, height: 50)
+        
+        myImageView.frame = CGRect(x: 5, y: 0, width: contentView.frame.size.width - 10, height: contentView.frame.size.width - 50)
+        
+    }
+    
+    public func setName(label: String){
+        myLabel.text = label
+    }
