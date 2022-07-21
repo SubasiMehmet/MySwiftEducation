@@ -94,3 +94,23 @@
         buttonsView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(buttonsView)
   
+--
+
+**Following Safe Area**
+
+> With this code piece, we can take safe area's coordinat or frame
+
+    override func viewSafeAreaInsetsDidChange() {
+        
+        if #available(iOS 11.0, *) {
+            let window = UIApplication.shared.windows[0]
+            
+            let safeFrame = window.safeAreaLayoutGuide.layoutFrame
+            collectionView!.frame = safeFrame  
+            /*
+             topSafeAreaHeight = safeFrame.minY
+             bottomSafeAreaHeight = window.frame.maxY - safeFrame.maxY
+             */
+        }
+        
+    }
