@@ -104,8 +104,9 @@
         return CGSize(width: 140, height: 180)
         
     }
-    
-**DidSelect **
+ 
+ 
+**DidSelect**
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let person = people[indexPath.item]
